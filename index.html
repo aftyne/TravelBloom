@@ -1,22 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel Bloom</title>
-</head>
-<body>
-    <nav>
-        <div>
-            <a href="">Home</a>
-            <a href="">About Us</a>
-            <a href="">Contact Us</a>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-brand">
+        <div class="logo-icon">
+          <i class="fa-solid fa-plane-departure"></i>
         </div>
-        <div>
-            <input type="text">
-            <button>Search</button>
-            <button>C</button>
+        <span class="brand-name">TravelBloom</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about-us.html">About Us</a></li>
+        <li><a href="/contact-us.html">Contact Us</a></li>
+      </ul>
+
+      <form class="nav-search-form" id="search-form">
+        <div class="search-input-wrapper">
+          <input type="text" id="search-input" placeholder="Enter a destination or keyword" />
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
         </div>
+        <button type="submit" class="btn btn-search">Search</button>
+        <button type="reset" class="btn btn-clear">Clear</button>
+      </form>
     </nav>
-</body>
+
+    <main class="hero-section">
+      <aside class="social-sidebar">
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </aside>
+
+      <div class="hero-content">
+        <h1 class="hero-title">
+          EXPLORE DREAM<br />
+          DESTINATION
+        </h1>
+        <p class="hero-description">
+          The Travel Recommendation App helps users explore popular travel destinations through an
+          interactive and user-friendly interface. It allows users to search for beaches, temples,
+          countries, or specific country names to view related cities along with images and
+          descriptions. The app dynamically fetches data from a structured JSON file to display
+          relevant results. It provides a simple and efficient way to discover and plan travel
+          destinations.
+        </p>
+        <a href="/" class="btn-book">Book Now</a>
+      </div>
+      <section id="resultsContainer" class="results-container hidden" aria-live="polite">
+        <!-- Injected via JavaScript -->
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>
